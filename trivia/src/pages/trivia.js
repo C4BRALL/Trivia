@@ -78,7 +78,6 @@ class Trivia extends Component {
       allquestions[indiceAleatorio] = elemento;
     }
     // esse for é um fisher-yats retirado deste site > http://cangaceirojavascript.com.br/como-embaralhar-arrays-algoritmo-fisher-yates/
-
     this.setState({ allquestions });
   };
 
@@ -187,7 +186,6 @@ class Trivia extends Component {
                   <button
                     type="button"
                     id={ index }
-                    // style={{hover: pointer}}
                     data-testid="correct-answer"
                     className={ answerClick ? classnameCorrect : null }
                     onClick={ this.handleAnswerClick }

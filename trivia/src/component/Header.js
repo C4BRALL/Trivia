@@ -27,28 +27,41 @@ class Header extends React.Component {
     const { hash } = this.state;
     const { name, score } = this.props;
     return (
-      <>
-        <img
-          src={ logo }
-          className="App-logo"
-          alt="logo"
-        />
-        <img
-          src={ `https://www.gravatar.com/avatar/${hash}` }
-          alt="avatar-profile"
-          data-testid="header-profile-picture"
-        />
-        <p
-          data-testid="header-player-name"
+      <header className='p-3 mb-3 bg-white border-bottom'>
+        <div
+        className='grid-class container-fluid d-grid gap-3 align-items-center'
         >
-          { name }
-        </p>
-        <p
-          data-testid="header-score"
-        >
-          { score }
-        </p>
-      </>
+          <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start'>
+            <img
+              src={ logo }
+              className="box-logo d-flex align-items-center mb-2 mb-lg-0 bi me-2"
+              alt="logo"
+            />
+            <ul className='nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0'>
+              <li className='nav-link px-2 link-secondary'>
+                <p
+                  data-testid="header-player-name"
+                >
+                  Player: { name }
+                </p>
+              </li>
+              <li className='nav-link px-2 link-secondary'>
+                <p
+                  data-testid="header-score"
+                >
+                  Pontos: { score }
+                </p>
+              </li>
+            </ul>
+            <img
+              src={ `https://www.gravatar.com/avatar/${hash}` }
+              alt="avatar-profile"
+              data-testid="header-profile-picture"
+              className='box-profile text-end rounded-circle'
+            />
+          </div>
+        </div>
+      </header>
     );
   }
 }

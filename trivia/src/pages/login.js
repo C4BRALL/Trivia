@@ -70,42 +70,59 @@ class Login extends Component {
         <div>
           <img
             src={ logo }
-            className="App-logo"
+            className="mb-3 App-logo rounded mx-auto d-block"
             alt="logo"
           />
         </div>
-        <div className="input-group mb-5">
-          <input
-            name="name"
-            data-testid="input-player-name"
-            placeholder="nome"
-            className="form-control"
-            value={ name }
-            onChange={ this.onInputChange }
-          />
-          <input
-            name="gravatarEmail"
-            data-testid="input-gravatar-email"
-            placeholder="email"
-            className="form-control"
-            value={ gravatarEmail }
-            onChange={ this.onInputChange }
-          />
-          <input
-            type="button"
-            value="Play"
-            data-testid="btn-play"
-            className="btn btn-primary"
-            disabled={ isSaveButtonDisabled }
-            onClick={ this.handleCLick }
-          />
-          <input
-            type="button"
-            value="Settings"
-            data-testid="btn-settings"
-            className="btn btn-primary"
-            onClick={ this.handleCLickToSettings }
-          />
+        <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center'>
+          <div className="bd-example box-form">
+            <form className='row'>
+              <div className='form-floating mb-3'>
+                <input
+                  name="name"
+                  data-testid="input-player-name"
+                  placeholder="nome"
+                  id="nome"
+                  className="form-control"
+                  value={ name }
+                  onChange={ this.onInputChange }
+                />
+                <label
+                  className='form-label'
+                  htmlFor='nome'
+                  placeholder='Nome:'
+                >
+                  Nome:
+                </label>
+              </div>
+              <div className='form-floating mb-3'>
+                <input
+                  name="gravatarEmail"
+                  data-testid="input-gravatar-email"
+                  placeholder="email"
+                  id="email"
+                  className="form-control"
+                  value={ gravatarEmail }
+                  onChange={ this.onInputChange }
+                />
+                <label
+                  className='form-label'
+                  htmlFor='email'
+                  placeholder='Email:'
+                >
+                  Email:
+                </label>
+              </div>
+              <input
+                type="button"
+                value="Play"
+                data-testid="btn-play"
+                className="btn btn-primary"
+                disabled={ isSaveButtonDisabled }
+                onClick={ this.handleCLick }
+              />
+            </form>
+          </div>
         </div>
       </div>
     );
