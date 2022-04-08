@@ -1,9 +1,6 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
+  margin: 25px;
   pointer-events: none;
 }
 
@@ -15,26 +12,38 @@
   border: 3px solid rgb(6, 240, 15);
 }
 
+.box-logo {
+  box-sizing: content-box;
+  width: 15%;
+}
+
+.box-profile {
+  box-sizing: content-box;
+  width: 7%;
+}
+
+.box-form {
+  box-sizing: border-box;
+  width: 40%;
+  border: solid #000000 1px;
+  padding: 5px;
+}
+
+.bd-example {
+    position: relative;
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
 @media ( prefers-reduced-motion : no-preference ) {
 
   .App-logo {
     animation: shake infinite 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
-}
-
-.App-header {
-  align-items: center;
-  background-color: #282c34;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  min-height: 100vh;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes shake {
