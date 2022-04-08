@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "16"
+    "node": "14"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -44,6 +44,7 @@
   "devDependencies": {
     "@sheerun/mutationobserver-shim": "0.3.3",
     "@testing-library/react": "^9.5.0",
+    "@vercel/node": "^1.14.0",
     "mocha": "^7.2.0",
     "mochawesome": "^6.1.1",
     "mochawesome-merge": "^4.0.3",
