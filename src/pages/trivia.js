@@ -172,53 +172,64 @@ class Trivia extends Component {
     return (
       <>
         <Header />
-        <h1>Pergunta</h1>
-        <div>
-          <p>{score}</p>
-          <h5>{difficulty}</h5>
-          <h4 data-testid="question-category">{category}</h4>
-          <h4 data-testid="question-text">{question}</h4>
-          {allquestions === undefined
-            ? null
-            : allquestions.map((a, index) => (
-              <div data-testid="answer-options" key={ a }>
-                {a === correctAnswer ? (
-                  <button
-                    type="button"
-                    id={ index }
-                    data-testid="correct-answer"
-                    className={ answerClick ? classnameCorrect : null }
-                    onClick={ this.handleAnswerClick }
-                    disabled={ disableAnswers }
-                    name="correct"
-                  >
-                    {a}
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    id={ index }
-                    data-testid={ `wrong-answer-${index}` }
-                    className={ answerClick ? classnameIncorrect : null }
-                    onClick={ this.handleAnswerClick }
-                    disabled={ disableAnswers }
-                    name="incorrect"
-                  >
-                    {a}
-                  </button>
-                )}
+        <div className='d-md-flex justify-content-md-center'>
+          <div className='card shadow-box'>
+            <div class="card-body">
+              <div className='card-header'>
+                Pergunta
               </div>
-            ))}
-          <p>{startCounter}</p>
-          <hr />
-          {answerClick ? (
-            <input
-              type="button"
-              value="Proximo"
-              data-testid="btn-next"
-              onClick={ this.handleClick }
-            />
-          ) : null}
+              <div className='card-body'>
+              <h4 data-testid="question-text" className='card-title d-md-flex justify-content-md-center'>{question}</h4>
+              <h5 data-testid="question-category" className='card-subtitle mb-2 text-muted d-md-flex justify-content-md-center'>{category}</h5>
+              <h5 className='card-text d-md-flex justify-content-md-center'>difficulty: {difficulty}</h5>
+              <div className='d-grid gap-2 d-md-flex justify-content-md-center'>
+                {allquestions === undefined
+                ? null
+                : allquestions.map((a, index) => (
+                  <div data-testid="answer-options" key={ a }>
+                    {a === correctAnswer ? (
+                      <button
+                        type="button"
+                        id={ index }
+                        data-testid="correct-answer"
+                        className={ answerClick ? "btn btn-success mb-3" : "btn btn-primary mb-3" }
+                        onClick={ this.handleAnswerClick }
+                        disabled={ disableAnswers }
+                        name="correct"
+                      >
+                        {a}
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        id={ index }
+                        data-testid={ `wrong-answer-${index}` }
+                        className={ answerClick ? "btn btn-danger mb-3" : "btn btn-primary mb-3" }
+                        onClick={ this.handleAnswerClick }
+                        disabled={ disableAnswers }
+                        name="incorrect"
+                      >
+                        {a}
+                      </button>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className='counter d-md-flex justify-content-md-center'><strong>{startCounter}</strong></p>
+              {answerClick ? (
+                <div className='d-md-flex justify-content-md-end'>
+                <input
+                  type="button"
+                  value="Proximo"
+                  data-testid="btn-next"
+                  className='btn btn-primary'
+                  onClick={ this.handleClick }
+                />
+                </div>
+              ) : null}
+              </div>
+            </div>
+          </div>
         </div>
       </>
     );
