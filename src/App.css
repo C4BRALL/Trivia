@@ -8,6 +8,18 @@
   border: 3px solid red;
 }
 
+.shadow-box {
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.20);
+}
+
+.counter {
+  font-size: larger;
+}
+
+.card {
+  max-width: 80%;
+}
+
 .green-border {
   border: 3px solid rgb(6, 240, 15);
 }

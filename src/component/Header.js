@@ -27,30 +27,30 @@ class Header extends React.Component {
     const { hash } = this.state;
     const { name, score } = this.props;
     return (
-      <header className='p-3 mb-3 bg-white border-bottom'>
+      <header className='shadow-box p-3 mb-3 bg-white border-bottom'>
         <div
         className='grid-class container-fluid d-grid gap-3 align-items-center'
         >
-          <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start'>
+          <div className='d-flex flex-wrap align-items-center justify-content-center'>
             <img
               src={ logo }
-              className="box-logo d-flex align-items-center mb-2 mb-lg-0 bi me-2"
+              className="box-logo d-flex align-items-center mb-2 mb-lg-0 me-2"
               alt="logo"
             />
             <ul className='nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0'>
               <li className='nav-link px-2 link-secondary'>
-                <p
+                <h4
                   data-testid="header-player-name"
                 >
                   Player: { name }
-                </p>
+                </h4>
               </li>
               <li className='nav-link px-2 link-secondary'>
-                <p
+                <h4
                   data-testid="header-score"
                 >
                   Pontos: { score }
-                </p>
+                </h4>
               </li>
             </ul>
             <img
