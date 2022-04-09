@@ -31,7 +31,7 @@ class Header extends React.Component {
         <div
         className='grid-class container-fluid d-grid gap-3 align-items-center'
         >
-          <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start'>
+          <div className='d-flex flex-wrap align-items-center justify-content-center'>
             <img
               src={ logo }
               className="box-logo d-flex align-items-center mb-2 mb-lg-0 me-2"

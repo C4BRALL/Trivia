@@ -30,26 +30,41 @@ class Ranking extends Component {
   render() {
     const { ranking } = this.state;
     return (
-      <>
-        <h2 data-testid="ranking-title"> Ranking</h2>
-        {ranking.map((player, index) => (
-          <div
-            key={ player.name }
+      <div className='bd-example shadow-box'>
+        <h2 data-testid="ranking-title" className='text-center'> Ranking</h2>
+        <table className='table'>
+          <thead>
+            <tr>
+              <th scope="col">Posição</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Pontuação</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ranking.map((player, index) => (
+              <tr
+                className=''
+                key={ player.name }
+              >
+                <th scope="row">#{index}</th>
+                <td data-testid={ `player-name-${index}` }>{player.name}</td>
+                <td data-testeid={ `player-score-${index}` }>{player.score}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div className='d-grid gap-2 d-md-flex justify-content-md-center'>
+          <button
+            type="button"
+            data-testid="btn-go-home"
+            className='btn btn-primary'
+            onClick={ this.handleClick }
           >
-            <hr />
-            <p data-testid={ `player-name-${index}` }>{player.name}</p>
-            <p data-testeid={ `player-score-${index}` }>{player.score}</p>
-            <hr />
-          </div>
-        ))}
-        <button
-          type="button"
-          data-testid="btn-go-home"
-          onClick={ this.handleClick }
-        >
-          Tela Inicial
-        </button>
-      </>
+            Tela Inicial
+          </button>
+
+        </div>
+      </div>
     );
   }
 }
@@ -59,15 +74,3 @@ Ranking.propTypes = {
 };
 
 export default Ranking;
-
-//  function compare(a, b) {
-//    if (a.score < b.score) {
-//      return -1;
-//    }
-//    if (a.score > b.score) {
-//      return 1;
-//    }
-//    return 0;
-//  };
-//  const sortBooks = ageName.sort(compare);
-//  console.table(sortBooks);

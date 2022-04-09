@@ -78,23 +78,31 @@ class Feedback extends React.Component {
     return (
       <>
         <Header />
-        <h1 data-testid="feedback-text">{message}</h1>
-        <h1 data-testid="feedback-total-score">{score}</h1>
-        <h1 data-testid="feedback-total-question">{acertos}</h1>
-        <button
-          type="button"
-          onClick={ this.handleClickRanking }
-          data-testid="btn-ranking"
-        >
-          Ranking
-        </button>
-        <button
-          type="button"
-          data-testid="btn-play-again"
-          onClick={ this.handleClick }
-        >
-          Play Again
-        </button>
+        <figure className='text-center'>
+          <h1 data-testid="feedback-text" className='mb-4'>{message}</h1>
+          <figcaption className='"blockquote-footer mb-4'>
+            <h1 data-testid="feedback-total-score"> Seus Pontos: {score}</h1>
+            <h1 data-testid="feedback-total-question">Seus Acertos: {acertos}</h1>
+          </figcaption>
+        </figure>
+        <div className='d-grid gap-2 d-md-flex justify-content-md-center'>
+          <button
+            type="button"
+            className='btn btn-primary'
+            onClick={ this.handleClickRanking }
+            data-testid="btn-ranking"
+          >
+            Ranking
+          </button>
+          <button
+            type="button"
+            className='btn btn-primary'
+            data-testid="btn-play-again"
+            onClick={ this.handleClick }
+          >
+            Jogar de novo
+          </button>
+        </div>
       </>
     );
   }
