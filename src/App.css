@@ -10,6 +10,11 @@ body {
   color: #000000;
 }
 
+.transparent-window {
+  background-color: rgba(56, 56, 56, 0.466);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
 
 .App-logo {
   height: 40vmin;
