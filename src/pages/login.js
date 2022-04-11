@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { saveToken } from '../actions';
 import tokenRequest from '../API/tokenReques';
 import logo from '../trivia.png';
+import Particle from '../component/Particles';
 
 class Login extends Component {
   constructor() {
@@ -66,7 +67,7 @@ class Login extends Component {
   render() {
     const { isSaveButtonDisabled, name, gravatarEmail } = this.state;
     return (
-      <div>
+      <div className='fblack'>
         <div>
           <img
             src={ logo }
@@ -74,6 +75,7 @@ class Login extends Component {
             alt="logo"
           />
         </div>
+        <Particle />
         <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center'>
           <div className="bd-example box-form">
             <form className='row'>

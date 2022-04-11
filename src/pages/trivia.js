@@ -163,24 +163,21 @@ class Trivia extends Component {
       allquestions,
       correctAnswer,
       answerClick,
-      classnameCorrect,
-      classnameIncorrect,
       startCounter,
       disableAnswers,
-      score,
     } = this.state;
     return (
       <>
         <Header />
         <div className='d-md-flex justify-content-md-center'>
-          <div className='card shadow-box'>
+          <div className='card transparent-window shadow-box'>
             <div class="card-body">
               <div className='card-header'>
                 Pergunta
               </div>
               <div className='card-body'>
               <h4 data-testid="question-text" className='card-title d-md-flex justify-content-md-center'>{question}</h4>
-              <h5 data-testid="question-category" className='card-subtitle mb-2 text-muted d-md-flex justify-content-md-center'>{category}</h5>
+              <h5 data-testid="question-category" className='card-subtitle mb-2 d-md-flex justify-content-md-center'>{category}</h5>
               <h5 className='card-text d-md-flex justify-content-md-center'>difficulty: {difficulty}</h5>
               <div className='d-grid gap-2 d-md-flex justify-content-md-center'>
                 {allquestions === undefined
