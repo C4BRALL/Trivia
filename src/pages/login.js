@@ -66,7 +66,7 @@ class Login extends Component {
   render() {
     const { isSaveButtonDisabled, name, gravatarEmail } = this.state;
     return (
-      <div>
+      <div className='fblack'>
         <div>
           <img
             src={ logo }
