@@ -78,13 +78,15 @@ class Feedback extends React.Component {
     return (
       <>
         <Header />
-        <figure className='text-center'>
-          <h1 data-testid="feedback-text" className='mb-4'>{message}</h1>
-          <figcaption className='"blockquote-footer mb-4'>
-            <h1 data-testid="feedback-total-score"> Seus Pontos: {score}</h1>
-            <h1 data-testid="feedback-total-question">Seus Acertos: {acertos}</h1>
-          </figcaption>
-        </figure>
+        <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center'>
+          <figure className='text-center bd-example transparent-window box-form'>
+            <h1 data-testid="feedback-text" className='mb-4'>{message}</h1>
+            <figcaption className='mb-4'>
+              <h1 data-testid="feedback-total-score"> Seus Pontos: {score}</h1>
+              <h1 data-testid="feedback-total-question">Seus Acertos: {acertos}</h1>
+            </figcaption>
+          </figure>
+        </div>
         <div className='d-grid gap-2 d-md-flex justify-content-md-center'>
           <button
             type="button"
@@ -127,4 +129,6 @@ export default connect(mapStateToProps)(Feedback);
 
 // export function getShoppingCartItems() {
 //  return localStorage.shoppingCart ? JSON.parse(localStorage.shoppingCart) : {};
+// <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center'>
+//          <div className="bd-example transparent-window"></div>
 // }

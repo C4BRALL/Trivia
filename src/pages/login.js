@@ -66,7 +66,7 @@ class Login extends Component {
   render() {
     const { isSaveButtonDisabled, name, gravatarEmail } = this.state;
     return (
-      <div>
+      <div className='fblack'>
         <div>
           <img
             src={ logo }
@@ -75,7 +75,7 @@ class Login extends Component {
           />
         </div>
         <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center'>
-          <div className="bd-example box-form">
+          <div className="bd-example transparent-window">
             <form className='row'>
               <div className='form-floating mb-3'>
                 <input

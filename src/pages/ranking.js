@@ -30,7 +30,8 @@ class Ranking extends Component {
   render() {
     const { ranking } = this.state;
     return (
-      <div className='bd-example shadow-box'>
+    <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center'>
+      <div className='bd-example shadow-box box-form'>
         <h2 data-testid="ranking-title" className='text-center'> Ranking</h2>
         <table className='table'>
           <thead>
@@ -65,6 +66,7 @@ class Ranking extends Component {
 
         </div>
       </div>
+    </div>
     );
   }
 }
